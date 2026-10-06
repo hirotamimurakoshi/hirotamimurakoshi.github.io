@@ -4,12 +4,216 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta name="robots" content="noindex, nofollow">
-  <meta name="description" content="村越祐民が公開する訴訟記録、公的資料その他の一次資料を整理するための資料庫です。">
+  <!-- 判決前は検索エンジンへの登録を積極的に行わない -->
+  <meta name="robots" content="noindex, nofollow, noarchive">
+
+  <meta
+    name="description"
+    content="村越祐民が公開する訴訟記録、公的資料その他の一次資料を整理するための資料サイトです。"
+  >
 
   <title>村越祐民｜公的資料・訴訟記録</title>
 
-  <link rel="stylesheet" href="/assets/style.css">
+  <style>
+    :root {
+      --text: #202124;
+      --subtext: #5f6368;
+      --line: #d9dce1;
+      --soft-line: #eceef1;
+      --background: #ffffff;
+      --soft-background: #f7f8f9;
+      --accent: #23384d;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      background: var(--background);
+    }
+
+    body {
+      margin: 0;
+      color: var(--text);
+      background: var(--background);
+      font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Helvetica Neue",
+        "Hiragino Kaku Gothic ProN",
+        "Yu Gothic",
+        YuGothic,
+        Meiryo,
+        sans-serif;
+      font-size: 16px;
+      line-height: 1.9;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    main {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 72px 28px 48px;
+    }
+
+    header {
+      padding-bottom: 48px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .site-label {
+      margin: 0 0 10px;
+      color: var(--subtext);
+      font-size: 13px;
+      letter-spacing: 0.08em;
+    }
+
+    h1 {
+      margin: 0;
+      color: #111;
+      font-size: 32px;
+      font-weight: 600;
+      line-height: 1.45;
+      letter-spacing: 0.02em;
+    }
+
+    .lead {
+      margin: 28px 0 0;
+      max-width: 680px;
+      font-size: 17px;
+      line-height: 2;
+    }
+
+    section {
+      margin-top: 52px;
+    }
+
+    h2 {
+      margin: 0 0 24px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--line);
+      color: #151515;
+      font-size: 21px;
+      font-weight: 600;
+      line-height: 1.55;
+    }
+
+    p {
+      margin: 0 0 20px;
+    }
+
+    .case-title {
+      margin-bottom: 8px;
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 1.7;
+    }
+
+    .case-meta {
+      margin: 0 0 28px;
+      color: var(--subtext);
+      font-size: 14px;
+      line-height: 1.8;
+    }
+
+    .notice {
+      margin: 28px 0;
+      padding: 18px 20px;
+      border-left: 3px solid #9aa0a6;
+      background: var(--soft-background);
+      font-size: 14px;
+      line-height: 1.8;
+    }
+
+    .claims {
+      margin-top: 30px;
+      border-top: 1px solid var(--soft-line);
+    }
+
+    .claim {
+      padding: 24px 0;
+      border-bottom: 1px solid var(--soft-line);
+    }
+
+    .claim-label {
+      margin: 0 0 6px;
+      color: var(--subtext);
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+    }
+
+    .claim-amount {
+      margin: 0 0 12px;
+      color: #111;
+      font-size: 19px;
+      font-weight: 600;
+    }
+
+    .claim p:last-child {
+      margin-bottom: 0;
+    }
+
+    ul {
+      margin: 0;
+      padding-left: 1.4em;
+    }
+
+    li {
+      margin-bottom: 10px;
+    }
+
+    .status {
+      display: inline-block;
+      margin-top: 8px;
+      padding: 4px 10px;
+      border: 1px solid #c6c9ce;
+      border-radius: 4px;
+      color: var(--subtext);
+      font-size: 12px;
+      line-height: 1.5;
+    }
+
+    .updated {
+      color: var(--subtext);
+      font-size: 13px;
+    }
+
+    footer {
+      margin-top: 72px;
+      padding-top: 22px;
+      border-top: 1px solid var(--line);
+      color: var(--subtext);
+      font-size: 13px;
+    }
+
+    @media (max-width: 600px) {
+      main {
+        padding: 42px 20px 36px;
+      }
+
+      header {
+        padding-bottom: 36px;
+      }
+
+      h1 {
+        font-size: 27px;
+      }
+
+      .lead {
+        font-size: 16px;
+      }
+
+      h2 {
+        font-size: 19px;
+      }
+
+      section {
+        margin-top: 42px;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -17,44 +221,78 @@
   <main>
 
     <header>
+      <p class="site-label">PUBLIC RECORDS &amp; LITIGATION MATERIALS</p>
+
       <h1>村越祐民｜公的資料・訴訟記録</h1>
 
       <p class="lead">
         このサイトは、訴訟記録その他の公的資料を、
-        出典とともに整理・公開するための資料庫です。
-      </p>
-
-      <p>
+        出典とともに整理・公開するための資料サイトです。
         裁判所の判断、公的機関の記録、訴訟当事者の主張及び本人の見解を区別し、
         資料の出所と日付を確認できる形で掲載することを基本方針としています。
       </p>
     </header>
 
+
     <section>
-      <h2>越川雅史市川市議会議員が提起した名誉毀損に関する損害賠償請求訴訟</h2>
+
+      <h2>係属中の訴訟</h2>
+
+      <p class="case-title">
+        越川雅史市川市議会議員が提起した損害賠償請求訴訟
+      </p>
+
+      <p class="case-meta">
+        千葉地方裁判所　令和6年（ワ）第1847号<br>
+        原告　越川雅史<br>
+        被告　村越祐民、市川市
+      </p>
 
       <p>
-        千葉地方裁判所<br>
-        令和6年（ワ）第1847号
+        本件は、越川雅史市川市議会議員が、
+        村越祐民及び市川市を被告として提起した損害賠償請求訴訟です。
+        村越祐民に対する請求と、市川市に対する請求では、
+        原告が主張する請求原因及び請求額が異なります。
       </p>
-<p>
-  本件は、越川雅史市川市議会議員が、
-  村越祐民及び市川市を被告として提起した損害賠償請求訴訟です。
-</p>
 
-<p>
-  原告は、村越祐民に対しては、
-  2022年4月2日に旧Twitter（現X）上で行った投稿が
-  名誉権及び名誉感情を侵害したとして、
-  不法行為に基づき110万円及びこれに対する遅延損害金の支払を求めています。
-</p>
+      <div class="notice">
+        以下は、現在の訴訟における原告の請求内容を要約したものです。
+        原告の主張を裁判所が事実として認定したことを意味するものではありません。
+      </div>
 
-<p>
-  一方、市川市に対しては、
-  2021年に公表されたパワーハラスメントに関する文書や、
-  当時の市長、副市長らによる職務上の発言等を含む一連の行為について、
-  国家賠償法第1条第1項に基づき990万円及びこれに対する遅延損害金の支払を求めています。
-</p>
+
+      <div class="claims">
+
+        <div class="claim">
+          <p class="claim-label">村越祐民に対する請求</p>
+
+          <p class="claim-amount">
+            110万円及び遅延損害金
+          </p>
+
+          <p>
+            原告は、村越祐民が2022年4月2日に旧Twitter（現X）上で行った投稿について、
+            原告の名誉権及び名誉感情を侵害したとして、
+            不法行為に基づく損害賠償を求めています。
+          </p>
+        </div>
+
+
+        <div class="claim">
+          <p class="claim-label">市川市に対する請求</p>
+
+          <p class="claim-amount">
+            990万円及び遅延損害金
+          </p>
+
+          <p>
+            原告は、2021年に市川市が公表したパワーハラスメントに関する文書や、
+            当時の市長、副市長らによる職務上の発言等を含む一連の行為について、
+            国家賠償法第1条第1項に基づく損害賠償を求めています。
+          </p>
+        </div>
+
+      </div>
 
       <p>
         本件は現在係属中です。
@@ -62,14 +300,13 @@
         言渡し後に判決文の内容を確認した上で掲載します。
       </p>
 
-      <nav class="menu">
-        <a href="/case/">本件訴訟について</a>
-        <a href="/timeline/">時系列</a>
-        <a href="/documents/">資料一覧</a>
-      </nav>
+      <span class="status">現在係属中</span>
+
     </section>
 
+
     <section>
+
       <h2>資料公開の基本方針</h2>
 
       <ul>
@@ -78,23 +315,30 @@
         <li>公的記録、訴訟記録及び一次資料について、出所を確認できる形で掲載します。</li>
         <li>第三者の住所、連絡先その他の個人情報は原則として公開しません。</li>
         <li>係争中の事項について、判決前に司法判断を先取りするような記述は行いません。</li>
-        <li>資料を掲載する場合は、必要に応じてマスキングその他の処理を行います。</li>
+        <li>資料の公開に際しては、必要に応じてマスキングその他の処理を行います。</li>
       </ul>
+
     </section>
+
 
     <section>
-      <h2>更新履歴</h2>
 
-      <dl class="history">
-        <dt>2026年10月6日</dt>
-        <dd>資料公開サイトを開設しました。</dd>
-      </dl>
+      <h2>このサイトについて</h2>
+
+      <p>
+        現在はサイトの準備段階です。
+        公開する資料については、内容及び個人情報等を確認した上で順次整理します。
+      </p>
+
+      <p class="updated">
+        最終更新：2026年10月6日
+      </p>
+
     </section>
 
+
     <footer>
-      <p>
-        © 2026 Hirotami Murakoshi
-      </p>
+      © 2026 Hirotami Murakoshi
     </footer>
 
   </main>
