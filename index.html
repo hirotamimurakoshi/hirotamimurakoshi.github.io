@@ -248,6 +248,45 @@
       padding-top: 8px;
       border-top: 1px solid var(--soft-line);
     }
+
+    /* 更新履歴：ページ内リンクを中心とする、装飾を抑えた一覧。 */
+    #updates { margin-top: 44px; }
+    .update-entry {
+      padding: 14px 0 12px;
+      border-bottom: 1px solid var(--soft-line);
+    }
+    .update-entry:first-of-type { padding-top: 0; }
+    .update-date {
+      margin: 0 0 4px;
+      color: var(--text);
+      font-size: 14px;
+      font-weight: 600;
+    }
+    .update-description {
+      margin: 0;
+      color: var(--subtext);
+      font-size: 14px;
+      line-height: 1.85;
+    }
+    .update-archive { margin-top: 15px; }
+    .update-archive summary {
+      width: fit-content;
+      cursor: pointer;
+      color: var(--accent);
+      font-size: 14px;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    .update-archive[open] { margin-bottom: 8px; }
+    .update-archive .update-entry:first-of-type { padding-top: 14px; }
+    .back-to-toc {
+      margin: 28px 0 0;
+      text-align: right;
+      font-size: 13px;
+      line-height: 1.7;
+    }
+    .back-to-toc a { color: var(--subtext); }
+
     [id] { scroll-margin-top: 24px; }
 
     @media (max-width: 600px) {
@@ -276,9 +315,49 @@
       </p>
     </header>
 
-    <nav class="toc" aria-label="目次">
+    <section id="updates" aria-labelledby="updates-heading">
+      <h2 id="updates-heading">更新履歴</h2>
+      <div class="update-entry">
+        <p class="update-date"><time datetime="2026-10-14">2026年10月14日</time></p>
+        <p class="update-description">
+          訴状・原告証拠説明書、取下書及び訴えの変更申立書等を公開し、
+          <a href="#initial-filings">訴えの提起と請求の変遷</a>を整理。
+          <a href="#judicial-statistics">司法統計年報</a>を参考資料に追加。
+          更新履歴とページ内の移動方法を整備。
+        </p>
+      </div>
+      <div class="update-entry">
+        <p class="update-date"><time datetime="2026-10-13">2026年10月13日</time></p>
+        <p class="update-description">
+          <a href="#hearing-20260417">4月17日</a>及び<a href="#hearing-20260619">6月19日</a>の
+          弁論準備手続期日の記録と関連資料を追加。
+          <a href="#policy">掲載PDFの画質に関する説明</a>を追記。
+        </p>
+      </div>
+      <div class="update-entry">
+        <p class="update-date"><time datetime="2026-10-12">2026年10月12日</time></p>
+        <p class="update-description">
+          <a href="#city-response-2026">市川市回答書</a>、
+          <a href="#drafts-202206">2022年6月の議会答弁案</a>を追加。
+          <a href="#references">参考文献・裁判例・資料</a>及び目次構成を整備。
+        </p>
+      </div>
+      <details class="update-archive">
+        <summary>過去の更新履歴を表示</summary>
+        <div class="update-entry">
+          <p class="update-date"><time datetime="2026-10-11">2026年10月11日</time></p>
+          <p class="update-description">
+            <a href="#hearing-20260619">6月19日の期日記録</a>と関連訴訟資料を追加。
+            <a href="#hearing-20261009">10月9日の手続状況</a>に証拠申出書へのリンクを追加。
+          </p>
+        </div>
+      </details>
+    </section>
+
+    <nav id="toc" class="toc" aria-label="目次">
       <p class="toc-title">目次</p>
       <ol>
+        <li><a href="#updates">更新履歴</a></li>
         <li><a href="#latest">最新の状況</a></li>
         <li><a href="#case">本件訴訟の概要</a>
           <ol>
@@ -326,7 +405,8 @@
 </div>
 
       <span class="status">弁論終結・判決言渡期日指定待ち</span>
-    </section>
+      <p class="back-to-toc"><a href="#toc">↑ 目次へ戻る</a></p>
+</section>
 
     <section id="case">
       <h2>本件訴訟の概要</h2>
@@ -490,7 +570,8 @@
           </p>
         </div>
       </div>
-    </section>
+      <p class="back-to-toc"><a href="#toc">↑ 目次へ戻る</a></p>
+</section>
 
 <section id="proceedings" class="section-group">
   <h2>審理の経過</h2>
@@ -576,6 +657,7 @@
         裁判所の判決を待ちたいと思います。
       </p>
     </div>
+  <p class="back-to-toc"><a href="#toc">↑ 目次へ戻る</a></p>
 </section>
 
 <section id="hearing-20260619">
@@ -729,6 +811,7 @@
     証拠申出書は別の資料です。後者は次のPDFをご参照ください：
     <a href="documents/2026-06-26-plaintiff-witness-request.pdf" target="_blank" rel="noopener noreferrer">原告証拠申出書（6月26日付）（PDF）</a>。
   </p>
+  <p class="back-to-toc"><a href="#toc">↑ 目次へ戻る</a></p>
 </section>
 
 <section id="hearing-20260417">
@@ -821,6 +904,7 @@
     今後の書面提出日程を明確にする姿勢を示したように感じました。
     これは訴訟当事者としての印象であり、裁判所の心証や結論を示すものではありません。
   </p>
+  <p class="back-to-toc"><a href="#toc">↑ 目次へ戻る</a></p>
 </section>
 </section>
 
@@ -940,6 +1024,7 @@
 </p>
 
 
+  <p class="back-to-toc"><a href="#toc">↑ 目次へ戻る</a></p>
 </section>
 
 <section id="drafts-202206">
@@ -975,6 +1060,7 @@
        target="_blank" rel="noopener noreferrer">被告市川市回答書（PDF）</a>をご参照ください。
     両案の具体的な文言の相違については、関係資料に基づき別途整理します。
   </p>
+  <p class="back-to-toc"><a href="#toc">↑ 目次へ戻る</a></p>
 </section>
 </section>
 
@@ -1228,13 +1314,14 @@
 
 
 
-  <h3 class="person">８　司法統計・公的資料</h3>
+  <h3 class="person" id="judicial-statistics">８　司法統計・公的資料</h3>
   <p>
     最高裁判所『司法統計年報』（各年・民事・行政編ほか）<br>
     <a href="https://www.courts.go.jp/toukei_siryou/shihotokei_nenpo/index.html"
        target="_blank" rel="noopener noreferrer">［裁判所公式サイト・各年の司法統計年報］</a>
   </p>
 
+  <p class="back-to-toc"><a href="#toc">↑ 目次へ戻る</a></p>
 </section>
 
     <section id="policy">
@@ -1251,35 +1338,11 @@
           裁判所での謄写によるため、画質や文字の鮮明さに差があります。
         </li>
       </ul>
-    </section>
+      <p class="back-to-toc"><a href="#toc">↑ 目次へ戻る</a></p>
+</section>
 
 <footer>
-  <p class="updated">
-    2026年10月11日　6月19日の期日記録及び関連訴訟資料3点を追加。
-    10月9日の手続状況に証拠申出書へのリンクを追加。
-  </p>
-  <p class="updated">
-  2026年10月12日　被告村越の求釈明申立書及び
-  被告市川市回答書を追加。
-  参考文献・裁判例・資料一覧を公開し、
-  外部参照リンクを整備。
-  二階層の目次と審理・資料別の構成を整備し、当事者の主張及び答弁案の説明を追加。
-  市川市提出の乙A第20号証・第21号証及び文書提出命令申立ての経緯を追記。
-  </p>
-   <p class="updated">
-     2026年10月13日　4月17日及び6月19日の弁論準備手続期日について、
-     審理経過と当事者別の準備書面・書証・証拠申出書を追加。
-     訴状・原告証拠説明書の掲載予定と、掲載PDFの画質についての説明を追記。
-  </p>
-   <p class="updated">
-    2026年10月14日　訴状及び原告証拠説明書を公開。
-    2025年の取下書・訴えの変更申立書、これに関する被告村越の第2・第3準備書面及び
-    裁判所事務連絡を掲載し、請求内容の変遷を整理。
-    参考資料に最高裁判所『司法統計年報』を追加。
-  </p>
-  <p class="updated">
-     最終更新：2026年10月14日
-  </p>
+  <p class="updated">最終更新：2026年10月14日</p>
   <p>© 2026 Hirotami Murakoshi</p>
 </footer>
 
